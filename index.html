@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Video Experiment</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <h1>My video player project experiment</h1>
+    <video src="/video/video (1).mp4" poster="/img/play-158609_1280.png" id="video" class="video" ></video>
+    <div class="controller">
+        <button class="start-btn" id="stop-btn">
+           <i class="fa fa-play fa-2x"></i> 
+        </button>
+        <button class="stop-btn" id="stop-btn">
+           <i class="fa fa-stop fa-2x"></i> 
+        </button>
+        <input type="range" min="0" max="100" value="o" step="0.1" />
+        <span class="stamp" id="stamp">00:00</span>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
