@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: grey;
+    display: flex;
+    flex-direction:column;
+    align-items: flex-start;
+    justify-content: center;
+    max-height: 100vh;
+    margin: 0;
+    padding: 30px;
+}
+h1{
+    color: white;
+}
+.video{
+    width: 20%;
+    border-radius: 20px;
+}
+.controller{
+    background-color: thistle;
+    width: 20%;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 10px;
+}
+.controller .start-btn,
+.controller .stop-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.stamp{
+    padding-left: 80px;
+    font-weight: bolder;
+}
+.controller .start-btn{
+    color: teal;
+}
+.controller .stop-btn{
+    color: red;
+}
+.controller .fa-pause{
+    color: white;
+}
+.controller .start-btn:focus,
+.controller .stop-btn:focus{
+    outline: none;
+}
+
+.controller .start-btn:hover,
+.controller .stop-btn:hover{
+    transform: scale(1.2);
+}
