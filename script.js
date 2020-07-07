@@ -1,3 +1,6 @@
+
+// code for video
+
 const startBtn = document.getElementById('start-btn');
 const stopBtn = document.getElementById('stop-btn');
 const bar = document.getElementById('bar');
@@ -59,3 +62,52 @@ stopBtn.addEventListener('click', function stopVideo(){
     video.pause();
 
 })
+
+// code for get API
+// const yourAnime = document.getElementById('your-anime');
+// const animeBtn = document.getElementById('anime-btn');
+
+// animeBtn.addEventListener('click', function getAnime(){
+//     fetch(`https://api.adviceslip.com/advice`)
+//     .then(res => res.json())
+//     .then(data =>{
+//         yourAnime.innerHTML = `${data.slip.advice}`
+//         console.log(data);
+
+//     })
+// })
+//////////////////////////////////////////////////////////////////
+// movie-list///
+
+const todoInput = document.getElementById('todo-input');
+const todoBtn = document.getElementById('todo-btn');
+const todoList = document.getElementById('todo-list');
+
+todoBtn.addEventListener('click', addMovie);
+
+
+
+function addMovie(event){
+    event.preventDefault();
+
+    const todoDiv = document.createElement("div");
+    todoDiv.classList.add("todo");
+
+    const newTodo = document.createElement('li');
+    newTodo.innerText = todoInput.value;
+    newTodo.classList.add('todo-item');
+    todoDiv.appendChild(newTodo);
+
+    const completeBtn = document.createElement('button');
+    completeBtn.innerHTML = '<i class= "fas fa-check fa"></i>';
+    completeBtn.classList.add("complete-btn");
+    todoDiv.appendChild(completeBtn);
+
+    const deleteBtn = document.createElement('button');
+    deleteBtn.innerHTML = '<i class= "fas fa-trash fa"></i>';
+    deleteBtn.classList.add("delete-btn");
+    todoDiv.appendChild(deleteBtn);
+
+    todoList.appendChild(todoDiv);
+
+}

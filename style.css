@@ -1,9 +1,8 @@
 *{
     box-sizing: border-box;
 }
-
-body{
-    background-color: grey;
+/* video */
+.video-body{
     display: flex;
     flex-direction:column;
     align-items: flex-start;
@@ -13,7 +12,7 @@ body{
     padding: 30px;
 }
 h1{
-    color: white;
+    color: black;
 }
 .video{
     width: 20%;
@@ -53,4 +52,80 @@ h1{
 .controller .start-btn:hover,
 .controller .stop-btn:hover{
     transform: scale(1.2);
+}
+footer{
+    color: black;
+    display: block;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding-right: 40px;
+    padding-bottom: 40px;
+}
+/* anime */
+.anime-btn{
+    /* position: relative; */
+    margin-left: 800px;
+    margin-top: 200px;
+}
+/* movies to watch */
+.todo-body{
+    background-color: blueviolet;
+    /* min-height: -50vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:500px ;
+}
+form input, form button{
+    border: none;
+    padding: 7px;
+    background-color: white;
+    cursor: pointer;
+}
+form input{
+    width: 350px;
+    font-size: 20px;
+    border-radius: 20px;
+}
+form input:focus,
+form button:focus{
+    outline: none;
+}
+/* form input:hover, */
+form button:hover{
+   transform: scale(1.2);
+}
+.todo-list{
+    list-style: none;
+}
+.todo{
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+    width: 400px;
+}
+.todo li{
+    flex: 1;
+    background-color: white;
+    border-radius: 20px;
+    padding: 3px;
+    font-size: 20px;
+    margin-right: 8px;
+}
+.delete-btn, .complete-btn{
+    cursor: pointer;
+    padding: 5px;
+}
+.delete-btn:hover,
+.complete-btn:hover{
+    transform: scale(1.2);
+}
+.delete-btn{
+    background-color: red;
+}
+.complete-btn{
+    background-color: green;
 }
