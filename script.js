@@ -82,8 +82,32 @@ stopBtn.addEventListener('click', function stopVideo(){
 const todoInput = document.getElementById('todo-input');
 const todoBtn = document.getElementById('todo-btn');
 const todoList = document.getElementById('todo-list');
+const deleteBtn = document.getElementById('delete-btn');
+const completeBtn = document.getElementById('complete-btn');
+// const task = document.getElementById('todo')
+const todoContainer = document.getElementById('todo-container')
 
 todoBtn.addEventListener('click', addMovie);
+
+// delete and check task
+    todoList.addEventListener('click', function(e){
+    const item = e.target;
+    if(item.classList[0] === "delete-btn"){
+        const todo = item.parentElement;
+        todo.classList.add('animation');
+        todo.addEventListener('transitionend',function(){ // transitioned removes the item after the transition is completed
+            todo.remove()
+        })
+    }   
+})
+
+    todoList.addEventListener('click', function(e){
+        const item = e.target;
+        if(item.classList[0] === "complete-btn"){
+            const todo = item.parentElement;
+            todo.classList.toggle('checked');
+        }    
+    })
 
 
 
@@ -109,5 +133,7 @@ function addMovie(event){
     todoDiv.appendChild(deleteBtn);
 
     todoList.appendChild(todoDiv);
+    // clear input value
+    todoInput.value = '';
 
 }

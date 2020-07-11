@@ -80,7 +80,7 @@ footer{
 }
 form input, form button{
     border: none;
-    padding: 7px;
+    padding: 3px;
     background-color: white;
     cursor: pointer;
 }
@@ -95,7 +95,7 @@ form button:focus{
 }
 /* form input:hover, */
 form button:hover{
-   transform: scale(1.2);
+   transform: rotate(20deg);
 }
 .todo-list{
     list-style: none;
@@ -104,8 +104,9 @@ form button:hover{
     font-size: 20px;
     display: flex;
     justify-content: space-around;
-    padding: 5px;
-    width: 400px;
+    padding: 3px;
+    width: 300px;
+    transition: 1s;
 }
 .todo li{
     flex: 1;
@@ -119,13 +120,29 @@ form button:hover{
     cursor: pointer;
     padding: 5px;
 }
+.delete-btn, .complete-btn:focus{
+    outline: none;
+}
+.fa-trash,
+.fa-check{
+    pointer-events: none;
+}
 .delete-btn:hover,
 .complete-btn:hover{
-    transform: scale(1.2);
+    transform: rotateZ(20deg);
 }
 .delete-btn{
     background-color: red;
 }
+.animation{
+    transform: rotateZ(10deg);
+    opacity: 0;
+}
 .complete-btn{
     background-color: green;
+}
+.checked{
+    text-decoration: line-through;
+    color: green;
+
 }
