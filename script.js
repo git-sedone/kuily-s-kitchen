@@ -63,19 +63,6 @@ stopBtn.addEventListener('click', function stopVideo(){
 
 })
 
-// code for get API
-// const yourAnime = document.getElementById('your-anime');
-// const animeBtn = document.getElementById('anime-btn');
-
-// animeBtn.addEventListener('click', function getAnime(){
-//     fetch(`https://api.adviceslip.com/advice`)
-//     .then(res => res.json())
-//     .then(data =>{
-//         yourAnime.innerHTML = `${data.slip.advice}`
-//         console.log(data);
-
-//     })
-// })
 //////////////////////////////////////////////////////////////////
 // movie-list///
 
@@ -84,8 +71,9 @@ const todoBtn = document.getElementById('todo-btn');
 const todoList = document.getElementById('todo-list');
 const deleteBtn = document.getElementById('delete-btn');
 const completeBtn = document.getElementById('complete-btn');
-// const task = document.getElementById('todo')
+const form = document.getElementById('form');
 const todoContainer = document.getElementById('todo-container')
+const small = document.getElementById('small')
 
 todoBtn.addEventListener('click', addMovie);
 
@@ -115,13 +103,16 @@ function addMovie(event){
     event.preventDefault();
 
     const todoDiv = document.createElement("div");
+    if(todoInput.value !== ''){ // checking it there is some input
+        small.innerText = '';
     todoDiv.classList.add("todo");
-
+ 
     const newTodo = document.createElement('li');
-    newTodo.innerText = todoInput.value;
-    newTodo.classList.add('todo-item');
-    todoDiv.appendChild(newTodo);
-
+        newTodo.innerText = todoInput.value;
+        newTodo.classList.add('todo-item');
+        todoDiv.appendChild(newTodo);
+    
+    
     const completeBtn = document.createElement('button');
     completeBtn.innerHTML = '<i class= "fas fa-check fa"></i>';
     completeBtn.classList.add("complete-btn");
@@ -135,5 +126,16 @@ function addMovie(event){
     todoList.appendChild(todoDiv);
     // clear input value
     todoInput.value = '';
-
+ }else{
+     small.innerText='Enter something';
+ }
 }
+// code for toggle the video button
+
+const toggleVideo = document.getElementById('video-btn');
+// const videoBody = document.getElementById('video-body');
+const disappear = document.getElementById('toggling-body');
+
+toggleVideo.addEventListener('click', function openVideo(){
+    disappear.classList.toggle('open-video');
+})

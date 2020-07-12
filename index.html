@@ -14,7 +14,7 @@
             <button class="ciao" id="ciao">About Us</button>
             <button class="ciao" id="ciao">Contacts</button>
             <button class="ciao" id="ciao">Benefits</button>
-            <button class="ciao" id="ciao">More..</button>
+            <button class="ciao" id="ciao">Offers</button>
             
         </div>
 
@@ -23,33 +23,34 @@
         <button id="video-btn" class="video-btn">
             <i class="fas fa-bars fa fa-3x"></i>
         </button>
+     
 
-        <video src="/video/video (1).mp4" poster="/img/play-158609_1280.png" id="video" class="video" ></video>
-        <div class="controller">
-            <button class="start-btn" id="start-btn">
-               <i class="fa fa-play fa-2x"></i> 
-            </button>
-            <button class="stop-btn" id="stop-btn">
-               <i class="fa fa-stop fa-2x"></i> 
-            </button>
-            <input id= "bar" class="bar" type="range" min="0" max="100" value="o" step="0.1" />
-            <span class="stamp" id="stamp">00:00</span>
+    
+        <div class="toggling-body" id="toggling-body">
+
+            <video src="/video/video (1).mp4" poster="/img/play-158609_1280.png" id="video" class="video" ></video>
+            <div class="controller">
+                <button class="start-btn" id="start-btn">
+                   <i class="fa fa-play fa-2x"></i> 
+                </button>
+                <button class="stop-btn" id="stop-btn">
+                   <i class="fa fa-stop fa-2x"></i> 
+                </button>
+                <input id= "bar" class="bar" type="range" min="0" max="100" value="o" step="0.1" />
+                <span class="stamp" id="stamp">00:00</span>
+            </div>
         </div>
     </div>
-    <!-- <div class="anime-body">
-        <div class="your-anime" id="your-anime">
-
-        </div>
-        <button class="anime-btn" id="anime-btn">Click Me</button> -->
-
+    
     </div>
     <div class="todo-body">
         <h1>My shopping List</h1>
-        <form>
+        <form id="form">
             <input type="text" class="todo-input" id="todo-input">
             <button class="todo-btn" id="todo-btn" type="submit">
                 <i class="fas fa-plus fa" id="plus"></i>
             </button>
+            <small id="small"></small>
         </form>
         <div class="todo-container">
             <ul class="todo-list" id="todo-list">
