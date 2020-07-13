@@ -139,3 +139,30 @@ const disappear = document.getElementById('toggling-body');
 toggleVideo.addEventListener('click', function openVideo(){
     disappear.classList.toggle('open-video');
 })
+
+// code for weather
+
+window.addEventListener('load', function(){
+    let longitude;
+    let latitude;
+    if(navigator.geolocation){
+        navigator.geolocation.getCurrentPosition(position=>{
+            console.log(position);
+            longitude=position.coords.longitude;
+            latitude=position.coords.latitude;
+
+            console.log(longitude);
+            console.log(latitude);
+            
+            
+            // const api = `http://www.7timer.info/bin/api.pl?lon=${longitude}&lat=${latitude}&product=astro&output=xml`;
+            const proxy = `https://cors-anywhere.herokuapp.com/`
+            fetch(`${proxy}https://www.metaweather.com/api//api/location/search/?lattlong=${latitude},${longitude}`)
+            .then(res => res.text())
+            .then(data => {
+                console.log(data);
+                
+            })
+            });
+    }
+});
