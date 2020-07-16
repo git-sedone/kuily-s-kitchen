@@ -140,29 +140,46 @@ toggleVideo.addEventListener('click', function openVideo(){
     disappear.classList.toggle('open-video');
 })
 
-// code for weather
+// code for food container
 
-window.addEventListener('load', function(){
-    let longitude;
-    let latitude;
-    if(navigator.geolocation){
-        navigator.geolocation.getCurrentPosition(position=>{
-            console.log(position);
-            longitude=position.coords.longitude;
-            latitude=position.coords.latitude;
+const foodForm = document.getElementById('food-form');
+const submit = document.getElementById('submit-btn');
+const inputFood = document.getElementById('input-food');
+const result = document.getElementById('display-result');
+const meals = document.getElementById('meals');
+const meal = document.getElementById('meal');
+// const getRecipe = document.getElementById('meals button');
 
-            console.log(longitude);
-            console.log(latitude);
+// getRecipe.addEventListener('click', function)
+submit.addEventListener('click', function searchFood(e){
+    e.preventDefault(e);
+    // console.log('click');
+    if(inputFood.value === ''){
+        alert ('enter value');
+        
+    }else{
+        console.log(inputFood.value)
+        fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${inputFood.value}`)
+        .then(res => res.json())
+        .then(data =>{
+            // console.log('fetch returned data: ', data)
             
-            
-            // const api = `http://www.7timer.info/bin/api.pl?lon=${longitude}&lat=${latitude}&product=astro&output=xml`;
-            const proxy = `https://cors-anywhere.herokuapp.com/`
-            fetch(`${proxy}https://www.metaweather.com/api//api/location/search/?lattlong=${latitude},${longitude}`)
-            .then(res => res.text())
-            .then(data => {
-                console.log(data);
-                
-            })
-            });
+            if(data.meals === null){
+                result.innerHTML = `<p>meal not found</p>`;
+                inputFood.value = '';
+            }else{
+                result.innerHTML = `<h3>search for: '${inputFood.value}'</h3>`;
+                console.log(data.meals)
+                for(i=0;i<data.meals.length;i++){
+                    meals.innerHTML = data.meals.map(meal =>`
+                    <img src ="${meal.strMealThumb}"/>
+                    <button>${meal.strMeal}</button>`
+                    
+                    )
+                }
+                inputFood.value='';
+            }
+        })
     }
-});
+    
+})
