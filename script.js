@@ -173,7 +173,7 @@ submit.addEventListener('click', function searchFood(e){
                 for(i=0;i<data.meals.length;i++){
                     meals.innerHTML = data.meals.map(meal =>`
                     <img src ="${meal.strMealThumb}"/>
-                    <button>${meal.strMeal}</button>`
+                    <p>${meal.strMeal}</p>`
                     
                     )
                 }
