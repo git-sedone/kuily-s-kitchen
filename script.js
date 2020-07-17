@@ -148,8 +148,14 @@ const inputFood = document.getElementById('input-food');
 const result = document.getElementById('display-result');
 const meals = document.getElementById('meals');
 const meal = document.getElementById('meal');
-// const getRecipe = document.getElementById('meals button');
+const instruction = document.getElementById('instructions');
+const img = document.getElementById('image-food')
 
+// print the instruction
+
+img.addEventListener('click', function showInstruction(){
+    instruction.style.display='block';
+})
 // getRecipe.addEventListener('click', function)
 submit.addEventListener('click', function searchFood(e){
     e.preventDefault(e);
@@ -172,14 +178,17 @@ submit.addEventListener('click', function searchFood(e){
                 console.log(data.meals)
                 for(i=0;i<data.meals.length;i++){
                     meals.innerHTML = data.meals.map(meal =>`
-                    <img src ="${meal.strMealThumb}"/>
-                    <p>${meal.strMeal}</p>`
+                    <img src ="${meal.strMealThumb}" id ="image-food"/>
+                    <p>${meal.strMeal}</p>
+                    <h6>${meal.strInstructions}</h6>
+                    `
                     
                     )
                 }
                 inputFood.value='';
             }
         })
+        
     }
     
 })
