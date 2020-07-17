@@ -265,28 +265,37 @@ h3{
 p{
     color: white;
     font-weight:bolder;
-    cursor: pointer;
     font-size: 20px;
 }
 h6{
-    /* display: none; */
+    display: block;
     background-color: var(--back-colour);
     color: white;
     font-size: medium;
-    padding: 15px;
+    padding: 35px;
     width: 560px;
+    border-radius: 50px;
+    animation-name: ciaoInstructions;
+    animation-duration: 4s;
 }
-p:hover{
-    transform: scale(1.2);
+.open-instruction{
+    display: block;
 }
+@keyframes ciaoInstructions{
+    from{opacity: 0}
+    to{opacity:1}
+}
+
 .meals{
     margin-top: 50px;
     height: 560px;
     overflow: scroll;
+    
 }
+
 .meals img{
     overflow: scroll;
-    width: 100px;
+    width: 200px;
     border-radius: 100%;
     opacity: 0.5;
     cursor: pointer;
@@ -298,3 +307,4 @@ p:hover{
 .input-food{
     padding: 8px;
 }
+

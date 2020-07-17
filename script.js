@@ -149,19 +149,16 @@ const result = document.getElementById('display-result');
 const meals = document.getElementById('meals');
 const meal = document.getElementById('meal');
 const instruction = document.getElementById('instructions');
-const img = document.getElementById('image-food')
+const h6 = document.getElementById('h6')
 
-// print the instruction
 
-img.addEventListener('click', function showInstruction(){
-    instruction.style.display='block';
-})
-// getRecipe.addEventListener('click', function)
 submit.addEventListener('click', function searchFood(e){
+    meals.value='';
     e.preventDefault(e);
     // console.log('click');
     if(inputFood.value === ''){
-        alert ('enter value');
+        result.innerHTML ='<p>Come on!!! empty search?? type something</p>';
+        meals.innerHTML = '';
         
     }else{
         console.log(inputFood.value)
@@ -171,24 +168,30 @@ submit.addEventListener('click', function searchFood(e){
             // console.log('fetch returned data: ', data)
             
             if(data.meals === null){
-                result.innerHTML = `<p>meal not found</p>`;
+                
+                result.innerHTML = `<p>opss I don't know this meal..</p>`;
                 inputFood.value = '';
+                meals.innerHTML= '';
             }else{
-                result.innerHTML = `<h3>search for: '${inputFood.value}'</h3>`;
+                result.innerHTML = `<h3>good choise: '${inputFood.value}'</h3>`;
+                inputFood.value = '';
                 console.log(data.meals)
                 for(i=0;i<data.meals.length;i++){
                     meals.innerHTML = data.meals.map(meal =>`
-                    <img src ="${meal.strMealThumb}" id ="image-food"/>
+                    <img src ="${meal.strMealThumb}" id ="imageFood"/>
                     <p>${meal.strMeal}</p>
-                    <h6>${meal.strInstructions}</h6>
+                    <div><h6 id="h6" class="h6">${meal.strInstructions}</h6></div>
                     `
                     
                     )
                 }
-                inputFood.value='';
+                        document.getElementById('imageFood').onclick = function open (){
+                            // h6.classList.toggle('open-instruction')
+                            console.log('ciao');
+                            
+                        }
+                
             }
         })
-        
     }
-    
 })
