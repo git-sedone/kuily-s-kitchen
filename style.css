@@ -1,0 +1,316 @@
+:root{
+    --back-colour: rgba(80, 90, 0, 0.3);
+    --titles: white;
+}
+*{
+    box-sizing: border-box;
+    font-family: 'Indie Flower', cursive;
+}
+body{
+    background-image: url(/img/food.jpg);
+    background-size: 100% 100%;
+    height: 100vh; 
+    color: white;   
+}
+
+/* top menu */
+.top-menu{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--back-colour);
+    border-bottom: solid 15px white;
+    margin-right: 20px;
+    margin-left: 10px;
+    border-radius: 20px;
+    padding: 5px;
+    position: sticky;
+}
+
+.ciao{
+    padding:10px ;
+    width: 200px;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-right: 100px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: transparent;
+    color: white;
+}
+button:hover{
+    transform: scale(1.2);
+}
+/* video toggle button */
+
+.video-btn{
+    position: relative;
+    left: 0;
+    background-color: var(--back-colour);
+    color: white;
+    margin-left: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.video-btn:hover{
+    transform: rotate(90deg);
+}
+
+.video-btn:focus{
+    outline: none;
+}
+
+
+/* video */
+.toggling-body{
+    display: none;
+    max-height: 50vh;
+    padding: 30px;
+    margin-left: 40px;
+    animation-name: change;
+    animation-duration: 3s;
+}
+@keyframes change{
+        from{
+            opacity:0;
+        }
+        to{
+            opacity:1;
+        }
+}
+
+.open-video{
+    display: block;
+    position: absolute;
+}
+h1{
+    color: white;
+}
+h2{
+    color: white;
+}
+
+.video{
+    width: 20%;
+    border-radius: 100px;
+}
+.controller{
+    position: relative;
+    background-color:var(--back-colour);
+    width: 20%;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 20px;
+    border: 4px solid white;
+}
+.controller .start-btn,
+.controller .stop-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.stamp{
+    padding-left: 80px;
+    font-weight: bolder;
+    color: white;
+}
+.controller .start-btn{
+    color: green;
+}
+.controller .stop-btn{
+    color: red;
+}
+.controller .fa-pause{
+    color: white;
+}
+.controller .start-btn:focus,
+.controller .stop-btn:focus{
+    outline: none;
+}
+
+.controller .start-btn:hover,
+.controller .stop-btn:hover{
+    transform: scale(1.2);
+}
+footer{
+    color: white;
+    display: block;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    font-size: 20px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+}
+/* shopping list */
+.todo-body{
+    position: absolute;
+    right: 100px;
+    top: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width:400px ;
+    border-radius: 20px;
+    margin-top: 20px;
+    max-height: 500px;
+    overflow:scroll;
+}
+small{
+    font-weight: bolder;
+    color: red;
+    display: block;
+}
+
+form input, form button{
+    border: none;
+    padding: 3px;
+    background-color: white;
+    cursor: pointer;
+    border: solid 1px white;
+}
+form input{
+    background-color: var(--back-colour);
+    color: white;
+}
+form input{
+    width: 350px;
+    font-size: 20px;
+    border-radius: 20px;
+}
+form input:focus,
+form button:focus{
+    outline: none;
+}
+/* form input:hover, */
+form button:hover{
+   transform: rotate(20deg);
+}
+.todo-list{
+    list-style: none;
+}
+.todo{
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    padding: 3px;
+    width: 300px;
+    transition: 1s;
+}
+.todo li{
+    flex: 1;
+    background-color: var(--back-colour);
+    border-radius: 20px;
+    padding: 3px;
+    font-size: 20px;
+    margin-right: 8px;
+    color: white;
+}
+.delete-btn, .complete-btn{
+    cursor: pointer;
+    padding: 5px;
+}
+.delete-btn, .complete-btn:focus{
+    outline: none;
+}
+.fa-trash,
+.fa-check{
+    pointer-events: none;
+}
+.delete-btn:hover,
+.complete-btn:hover{
+    transform: rotateZ(20deg);
+}
+.delete-btn{
+    background-color: red;
+}
+.animation{
+    transform: rotateZ(20deg);
+    opacity: 0;
+}
+.complete-btn{
+    background-color: green;
+}
+.checked{
+    text-decoration: line-through;
+    color: green;
+
+}
+
+/* code for food container */
+.food-container{
+    position: absolute;
+    top: 0;
+    top: 80px;
+    left: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.submit-btn{
+    width: 25px;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: white;   
+    cursor: pointer;
+    border: none;
+}
+
+.submit-btn:hover{
+    transform: scale(1.6);
+}
+h1{
+    font-size: 80px;
+}
+
+h2{
+    color:white;
+    font-size: 40px;
+
+}
+p{
+    color: white;
+    font-weight:bolder;
+    font-size: 25px;
+}
+.h6{
+    display: block;
+    opacity: 0.1;
+    background-color: var(--back-colour);
+    color: white;
+    font-size: 30px;
+    padding: 15px;
+    width: 560px;
+    border-radius: 50px;
+    cursor: pointer;
+    
+}
+.h6:hover{
+    opacity: 1;
+    /* cursor: pointer; */
+}
+
+.meals{
+    margin-top: 50px;
+    height: 560px;
+    overflow: scroll;   
+}
+
+.meals img{
+    overflow: scroll;
+    width: 200px;
+    border-radius: 100%;
+    opacity: 0.5;
+    cursor: pointer;
+}
+.meals img:hover{
+    opacity: 1;
+}
+.todo-input,
+.input-food{
+    padding: 8px;
+}
+
