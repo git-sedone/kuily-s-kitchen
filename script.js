@@ -149,7 +149,8 @@ const result = document.getElementById('display-result');
 const meals = document.getElementById('meals');
 const meal = document.getElementById('meal');
 const instruction = document.getElementById('instructions');
-const h6 = document.getElementById('h6')
+// const h6 = document.getElementById('h6')
+const imageClick = document.getElementById('imageFood');
 
 
 submit.addEventListener('click', function searchFood(e){
@@ -166,6 +167,8 @@ submit.addEventListener('click', function searchFood(e){
         .then(res => res.json())
         .then(data =>{
             // console.log('fetch returned data: ', data)
+
+        
             
             if(data.meals === null){
                 
@@ -180,16 +183,11 @@ submit.addEventListener('click', function searchFood(e){
                     meals.innerHTML = data.meals.map(meal =>`
                     <img src ="${meal.strMealThumb}" id ="imageFood"/>
                     <p>${meal.strMeal}</p>
-                    <div><h6 id="h6" class="h6">${meal.strInstructions}</h6></div>
+                    <div class="h6" id="h6"><h6>${meal.strInstructions}</h6></div>
                     `
                     
                     )
                 }
-                        document.getElementById('imageFood').onclick = function open (){
-                            // h6.classList.toggle('open-instruction')
-                            console.log('ciao');
-                            
-                        }
                 
             }
         })
