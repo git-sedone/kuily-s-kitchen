@@ -64,7 +64,7 @@ stopBtn.addEventListener('click', function stopVideo(){
 })
 
 //////////////////////////////////////////////////////////////////
-// movie-list///
+// shopping-list///
 
 const todoInput = document.getElementById('todo-input');
 const todoBtn = document.getElementById('todo-btn');

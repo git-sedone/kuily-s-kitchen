@@ -9,7 +9,9 @@ body{
     background-image: url(/img/food.jpg);
     background-size: 100% 100%;
     height: 100vh; 
+    font-family: 'Indie Flower', cursive;
 }
+
 /* top menu */
 .top-menu{
     display: flex;
@@ -277,23 +279,18 @@ p{
     padding: 15px;
     width: 560px;
     border-radius: 50px;
-    /* animation-name: ciaoInstructions; */
-    /* animation-duration: 4s; */
+    cursor: pointer;
+    
 }
 .h6:hover{
     opacity: 1;
+    /* cursor: pointer; */
 }
-
-/* @keyframes ciaoInstructions{ */
-    /* from{opacity: 0} */
-    /* to{opacity:1} */
-/* } */
 
 .meals{
     margin-top: 50px;
     height: 560px;
-    overflow: scroll;
-    
+    overflow: scroll;   
 }
 
 .meals img{
