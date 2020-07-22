@@ -282,11 +282,11 @@ p{
     width: 560px;
     border-radius: 50px;
     cursor: pointer;
+    margin-bottom: 20px;
     
 }
 .h6:hover{
     opacity: 1;
-    /* cursor: pointer; */
 }
 
 .meals{
@@ -305,8 +305,5 @@ p{
 .meals img:hover{
     opacity: 1;
 }
-.todo-input,
-.input-food{
-    padding: 8px;
-}
+
 
