@@ -158,7 +158,7 @@ submit.addEventListener('click', function searchFood(e){
     e.preventDefault(e);
     // console.log('click');
     if(inputFood.value === ''){
-        result.innerHTML ='<p>Come on!!! empty search?? type something</p>';
+        result.innerHTML =`<p>Come on!!! empty search?? type something</p>`;
         meals.innerHTML = '';
         
     }else{
@@ -176,16 +176,15 @@ submit.addEventListener('click', function searchFood(e){
                 inputFood.value = '';
                 meals.innerHTML= '';
             }else{
-                result.innerHTML = `<p>good choise: '${inputFood.value}'</p>`;
+                result.innerHTML = `<p>good choise: ${inputFood.value}</p>`;
                 inputFood.value = '';
                 console.log(data.meals)
                 for(i=0;i<data.meals.length;i++){
                     meals.innerHTML = data.meals.map(meal =>`
-                    <img src ="${meal.strMealThumb}" id ="imageFood"/>
-                    <h2>${meal.strMeal}</h2>
-                    <div class="h6" id="h6"><h6>${meal.strInstructions}</h6></div>
-                    `
-                    
+                    <img src = ${meal.strMealThumb} id = imageFood/>
+                    <h2> ${meal.strMeal} </h2>
+                    <div class= h6 id= h6><h6> ${meal.strInstructions} </h6></div>`
+                          
                     )
                 }
                 

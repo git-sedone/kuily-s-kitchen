@@ -239,10 +239,6 @@ form button:hover{
 
 /* code for food container */
 .food-container{
-    position: absolute;
-    top: 0;
-    top: 80px;
-    left: 700px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -268,7 +264,7 @@ h1{
 
 h2{
     color:white;
-    font-size: 40px;
+    font-size: 20px;
 
 }
 p{
@@ -286,11 +282,11 @@ p{
     width: 560px;
     border-radius: 50px;
     cursor: pointer;
+    margin-bottom: 20px;
     
 }
 .h6:hover{
     opacity: 1;
-    /* cursor: pointer; */
 }
 
 .meals{
@@ -309,8 +305,5 @@ p{
 .meals img:hover{
     opacity: 1;
 }
-.todo-input,
-.input-food{
-    padding: 8px;
-}
+
 
