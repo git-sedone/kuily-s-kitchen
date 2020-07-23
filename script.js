@@ -63,8 +63,8 @@ stopBtn.addEventListener('click', function stopVideo(){
 
 })
 
-//////////////////////////////////////////////////////////////////
-// shopping-list///
+
+// shopping-list
 
 const todoInput = document.getElementById('todo-input');
 const todoBtn = document.getElementById('todo-btn');
@@ -102,11 +102,12 @@ todoBtn.addEventListener('click', addMovie);
 function addMovie(event){
     event.preventDefault();
 
+    // checking if there is some input
+    if(todoInput.value !== ''){ 
     const todoDiv = document.createElement("div");
-    if(todoInput.value !== ''){ // checking it there is some input
         small.innerText = '';
     todoDiv.classList.add("todo");
- 
+    // adding new ingredient to the list
     const newTodo = document.createElement('li');
         newTodo.innerText = todoInput.value;
         newTodo.classList.add('todo-item');
@@ -127,13 +128,12 @@ function addMovie(event){
     // clear input value
     todoInput.value = '';
  }else{
-     small.innerText='Enter something';
+     small.innerText='come on!! type something';
  }
 }
 // code for toggle the video button
 
 const toggleVideo = document.getElementById('video-btn');
-// const videoBody = document.getElementById('video-body');
 const disappear = document.getElementById('toggling-body');
 
 toggleVideo.addEventListener('click', function openVideo(){
@@ -149,14 +149,13 @@ const result = document.getElementById('display-result');
 const meals = document.getElementById('meals');
 const meal = document.getElementById('meal');
 const instruction = document.getElementById('instructions');
-// const h6 = document.getElementById('h6')
 const imageClick = document.getElementById('imageFood');
 
 
 submit.addEventListener('click', function searchFood(e){
     meals.value='';
     e.preventDefault(e);
-    // console.log('click');
+    // checking if the user is trying to search an empty search
     if(inputFood.value === ''){
         result.innerHTML =`<p>Come on!!! empty search?? type something</p>`;
         meals.innerHTML = '';
@@ -166,12 +165,9 @@ submit.addEventListener('click', function searchFood(e){
         fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${inputFood.value}`)
         .then(res => res.json())
         .then(data =>{
-            // console.log('fetch returned data: ', data)
-
-        
-            
+     
+            // checking if the recipe is there
             if(data.meals === null){
-                
                 result.innerHTML = `<p>opss I don't know this meal..</p>`;
                 inputFood.value = '';
                 meals.innerHTML= '';
@@ -179,9 +175,10 @@ submit.addEventListener('click', function searchFood(e){
                 result.innerHTML = `<p>good choise: ${inputFood.value}</p>`;
                 inputFood.value = '';
                 console.log(data.meals)
+                
                 for(i=0;i<data.meals.length;i++){
                     meals.innerHTML = data.meals.map(meal =>`
-                    <img src = ${meal.strMealThumb} id = imageFood/>
+                    <img src = ${meal.strMealThumb} id = imageFood />
                     <h2> ${meal.strMeal} </h2>
                     <div class= h6 id= h6><h6> ${meal.strInstructions} </h6></div>`
                           

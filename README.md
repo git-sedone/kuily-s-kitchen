@@ -5,7 +5,8 @@ In the root of `Kuily's kitchen` project, right click in the index.html file and
 
 # project content
 
-- `Kuily's kitchen` allows the search for recipes everytime a key word in typed in the search input area;
+- `Kuily's kitchen` allows the search for recipes everytime a key word is typed in the search input area;
+- key word must be general, for example: `meat`, `fish`, `pie` etc...
 - the top menu list is not responsive;
 - the recipes are fetched from www.themealdb.com API website and displayed on the UI with their image and instructions;
 - to look for more recipes scroll the side bar;
