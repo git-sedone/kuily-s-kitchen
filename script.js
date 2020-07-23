@@ -102,7 +102,7 @@ todoBtn.addEventListener('click', addMovie);
 function addMovie(event){
     event.preventDefault();
 
-    // checking it there is some input
+    // checking if there is some input
     if(todoInput.value !== ''){ 
     const todoDiv = document.createElement("div");
         small.innerText = '';
@@ -128,7 +128,7 @@ function addMovie(event){
     // clear input value
     todoInput.value = '';
  }else{
-     small.innerText='Enter something';
+     small.innerText='come on!! type something';
  }
 }
 // code for toggle the video button
@@ -175,9 +175,10 @@ submit.addEventListener('click', function searchFood(e){
                 result.innerHTML = `<p>good choise: ${inputFood.value}</p>`;
                 inputFood.value = '';
                 console.log(data.meals)
+                
                 for(i=0;i<data.meals.length;i++){
                     meals.innerHTML = data.meals.map(meal =>`
-                    <img src = ${meal.strMealThumb} id = imageFood/>
+                    <img src = ${meal.strMealThumb} id = imageFood />
                     <h2> ${meal.strMeal} </h2>
                     <div class= h6 id= h6><h6> ${meal.strInstructions} </h6></div>`
                           
