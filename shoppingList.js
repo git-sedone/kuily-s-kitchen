@@ -31,8 +31,6 @@ shoppingList.addEventListener('click', function(e){
         }    
     })
 
-
-
 function addItem(event){
     event.preventDefault();
 

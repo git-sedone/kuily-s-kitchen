@@ -1,6 +1,5 @@
 
-// code for video
-
+//video
 const startBtn = document.getElementById('start-btn');
 const stopBtn = document.getElementById('stop-btn');
 const bar = document.getElementById('bar');
@@ -58,8 +57,7 @@ stopBtn.addEventListener('click', function stopVideo(){
     video.pause();
 })
 
-// code for toggle the video button
-
+//toggle the video button
 const toggleVideo = document.getElementById('video-btn');
 const disappear = document.getElementById('toggling-body');
 

@@ -25,6 +25,9 @@ body{
     padding: 5px;
     position: sticky;
 }
+.top:focus{
+    outline: none;
+}
 
 .top{
     padding:10px ;
@@ -237,7 +240,7 @@ form button:hover{
 
 }
 
-/* code for food container */
+/*food container */
 .food-container{
     display: flex;
     flex-direction: column;
@@ -274,7 +277,6 @@ p{
 }
 .h6{
     display: block;
-    /* opacity: 0.1; */
     background-color: var(--back-colour);
     color: white;
     font-size: 30px;
@@ -285,10 +287,6 @@ p{
     margin-bottom: 20px;
     
 }
-.h6:hover{
-    /* opacity: 1; */
-}
-
 .meals{
     margin-top: 50px;
     height: 560px;
@@ -300,7 +298,6 @@ p{
     width: 200px;
     border-radius: 100%;
     opacity: 0.5;
-    /* cursor: pointer; */
 }
 .meals img:hover{
     opacity: 1;
