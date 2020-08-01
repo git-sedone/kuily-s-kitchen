@@ -13,7 +13,7 @@ submit.addEventListener('click', function searchFood(e){
 
     meals.value='';
     e.preventDefault(e);
-// TODO: add error handling
+    
     // showing error for empty search
     if(inputFood.value === ''){
         result.innerHTML =`<p>Come on!!! empty search?? type something</p>`;
@@ -41,7 +41,7 @@ submit.addEventListener('click', function searchFood(e){
             }
         })
         .catch(error => {
-            throw Error("error in themealdb api", error);
+            throw Error("error in themealdb api ", error);
         })
     }
 })
