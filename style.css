@@ -1,6 +1,5 @@
 :root{
     --back-colour: rgba(20, 90, 60, 0.3);
-    --titles: white;
 }
 *{
     box-sizing: border-box;
@@ -142,6 +141,7 @@ footer{
    text-align: center;
    padding: 10px;
    font-size: 30px;
+   padding-bottom: 30px;
 }
 /* shopping list */
 .shopping-body{
