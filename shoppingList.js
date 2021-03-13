@@ -9,6 +9,23 @@ const form = document.getElementById('form');
 const shoppingContainer = document.getElementById('shopping-container')
 const small = document.getElementById('small')
 
+const closeBtn = document.getElementById('close')
+const sideBar = document.getElementById('side-bar-container')
+const sideNavBtn= document.getElementById('side-nav-btn')
+
+
+
+
+
+closeBtn.addEventListener('click', function(e){
+    console.log('click');
+    sideBar.style.display = 'none';
+})
+
+sideNavBtn.addEventListener('click', function(e){
+    sideBar.style.display = 'block';
+})
+
 shoppingBtn.addEventListener('click', addItem);
 
 // delete and check task

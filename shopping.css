@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Indie Flower', cursive;
+}
+body{
+    background-image: url(./img/pineapple-supply-co-prP9CYcRpzA-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+header a{
+    color: black;
+    margin-left: 10%;
+    font-size: 20px;
+}
+.mobile-shopping-body h1{
+    margin-top: 10%;
+    font-size: 40px;
+}
+.mobile-shopping-input{
+    margin-top: 10%;
+    width: 20rem;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    outline: none;
+    padding: 5px;
+}
+.mobile-shopping-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+
+.mobile-shopping-container ul li{
+    list-style: none;
+    background-color:#fafad2;
+    width: 90%;
+    margin: 0.2rem;
+    font-size: 1.2rem;
+    padding: 5px;
+}
+
+.mobile-shopping-button{
+    padding: 5px;
+    display: inline;
+    border: solid black 2px;
+    border-radius: 10px;
+}
+.mobile-shopping-button:hover{
+    background-color: #fafad2;
+}
+.delete-btn{
+    background-color: red;
+    float: right;
+    margin-right: 2%;
+    outline: none;
+    padding: 5px;
+}
+.buy-btn{
+    background-color: green;
+    float: right;
+    outline: none;
+    padding: 5px;
+}
+.fall{
+    transform: translateY(10rem) rotate(20deg);
+    opacity: 0;
+}
+.footer{
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    color: white;
+    background-color: black;
+}
+
