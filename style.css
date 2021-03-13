@@ -44,22 +44,18 @@ body{
     color: white;
 }
 button:hover{
-    transform: scale(1.2);
+    color: grey;
 }
 /* video toggle button */
 
 .video-btn{
     position: relative;
     left: 0;
-    background-color: var(--back-colour);
+    /* background-color: var(--back-colour); */
     color: white;
     margin-left: 10px;
     cursor: pointer;
     margin-top: 20px;
-}
-.video-btn:hover{
-    background-color: yellow;
-    color: black;
 }
 
 .video-btn:focus{
@@ -166,6 +162,12 @@ small{
     color: white;
     display: block;
 }
+.input-food{
+    padding-left: 10px;
+}
+.shopping-input{
+    padding-left: 10px;
+}
 
 form input, form button{
     border: none;
@@ -261,7 +263,7 @@ form button:hover{
 }
 
 .submit-btn:hover{
-    transform: scale(1.6);
+    color: darkgreen;
 }
 h1{
     font-size: 80px;
@@ -300,13 +302,59 @@ p{
     width: 200px;
     border-radius: 100%;
 }
+/* side navigation menu */
+.side-bar-container{
+    display: none;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background-color: darkred;
+    width: 50%;
+    animation-name: open;
+    animation-duration: 3s;
+}
+@keyframes open{
+    from{
+        transform: translateX(-50%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+.side-bar-container close{
+    float: right;
+}
+.side-bar-items li{
+    list-style: none;
+    margin-bottom: 50px;
+    margin-top: 30%;
+    font-size: 25px;
+}
+.side-bar-items li a{
+    text-decoration: none;
+    color: white;
+}
+.side-bar-items li:hover{
+    color: grey;
+}
+.side-nav-open{
+    display: none;
+}
+
+
+
+
 
 @media(max-width:590px){
     .top-menu{
         display: none;
     }
+    .side-nav-open{
+        display: block;
+    }
     .shopping-body{
         display: none;
+        
     }
     h6{
         width: 300px;
@@ -320,6 +368,9 @@ p{
     }
     .food-container h1{
         font-size: 70px;
+    }
+    .video-body .video-btn{
+        display: none;
     }
 }
 
