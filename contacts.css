@@ -10,8 +10,8 @@ body{
     list-style: none;
 }
 .main-nav-items a{
-    margin: 2rem;
-    padding: 0;
+    /* margin: 2rem; */
+    /* padding: 0; */
     /* text-decoration: none; */
     color: white;
     font-size: 30px;
@@ -21,7 +21,7 @@ body{
     color: grey;
 }
 .advert-container{
-    background-color: violet;
+    background-color:#ffb6c1;
     padding: 40px;
     color: white;
 
@@ -45,7 +45,8 @@ body{
     list-style: none;
 }
 .info-list li{
-    padding: 40px 50px;
+    /* padding: 40px 50px; */
+    font-size: 30px;
 }
 
 .icons-container{
@@ -58,9 +59,10 @@ body{
     justify-content: center;
 }
 .icons-container ul li a{
-    padding: 100px;
+    padding: 20px;
     color: white;
     text-decoration: none;
+    font-size: 20px;
 }
 .icons-container ul li a:hover{
     cursor: pointer;

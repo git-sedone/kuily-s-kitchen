@@ -6,6 +6,7 @@
 .main-nav-items .main-nav-item a{
     /* text-decoration: none; */
     font-size: 30px;
+    font-weight: bolder;
     list-style: none;
     color: white;
     margin-left: 2rem;
@@ -19,7 +20,7 @@
     background-size: cover;
     height: 100vh;
     opacity: 0.8;
-
+    overflow: scroll;
 }
 .about-container{
     display: flex;
