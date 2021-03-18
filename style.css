@@ -6,7 +6,7 @@
     font-family: 'Indie Flower', cursive;
 }
 body{
-    background-image: url(/img/food.jpg);
+    background-image: url(/img/food-min\ 2.jpg);
     background-size: cover;
     background-position: center;
     /* height: 100vh; */
@@ -27,6 +27,13 @@ body{
     border-radius: 20px;
     padding: 5px;
     position: sticky;
+}
+.top-menu a{
+    text-decoration: none;
+    color: white;
+}
+.top-menu a:hover{
+    color: grey;
 }
 .top:focus{
     outline: none;
